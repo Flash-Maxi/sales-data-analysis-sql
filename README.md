@@ -57,6 +57,7 @@ The dataset includes:
 
 ## Outcome
 The raw sales dataset was cleaned and transformed into a more reliable format, making it ready for further exploratory data analysis and dashboard creation.
+The cleaned dataset (`sales_data_cleaned.csv`) can be directly used for Power BI or Excel dashboards.
 
 ## Author
 Rishi Raj
