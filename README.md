@@ -24,7 +24,7 @@ The goal of this project was to transform raw sales data into a clean, structure
 
 ## Project Files
 - `data/sales_data_raw.csv` → Raw sales dataset
-- `data/sales_data_cleaned.csv` → Cleaned sales dataset
+- `data/sales_data_cleaned.csv` → Cleaned dataset after applying SQL transformations
 - `sql/sales_data_cleaning.sql` → SQL queries used for data cleaning
 - `setup.md` → Steps to run this project
 
@@ -44,6 +44,16 @@ The dataset includes:
 - Payment_Method
 - Sales_Channel
 - Region_and_Sales_Rep
+
+## Before vs After Cleaning
+
+| Aspect | Raw Data | Cleaned Data |
+|-------|--------|-------------|
+| Duplicates | Present | Removed |
+| Date Format | Text | Proper DATE |
+| Null Values | Present | Checked & handled |
+| Numeric Precision | Inconsistent | Rounded to 2 decimals |
+| Data Quality | Inconsistent | Standardized |
 
 ## Outcome
 The raw sales dataset was cleaned and transformed into a more reliable format, making it ready for further exploratory data analysis and dashboard creation.
