@@ -26,6 +26,7 @@ The goal of this project was to transform raw sales data into a clean, structure
 - `data/sales_data_raw.csv` → Raw sales dataset
 - `data/sales_data_cleaned.csv` → Cleaned dataset after applying SQL transformations
 - `sql/sales_data_cleaning.sql` → SQL queries used for data cleaning
+- - `sql/sales_eda.sql` → SQL queries used for exploratory data analysis
 - `setup.md` → Steps to run this project
 
 ## Dataset Columns
