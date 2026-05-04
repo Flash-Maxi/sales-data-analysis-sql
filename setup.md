@@ -25,6 +25,7 @@ sales-data-analysis-sql/
 │   └── sales_eda.sql
 │
 ├── README.md
+└── insights.md
 └── setup.md
 ```
 
