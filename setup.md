@@ -10,7 +10,7 @@ Ensure the following tools are installed:
 
 * MySQL Server (8.0 or above recommended)
 * MySQL Workbench
-* (Optional) Power BI Desktop for dashboard visualization
+* Power BI Desktop for dashboard visualization
 
 ---
 
