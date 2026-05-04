@@ -1,20 +1,23 @@
 # Setup Guide
 
-This guide explains how to run the Sales Data Cleaning and EDA project using MySQL.
+This guide explains how to run the **SQL + Power BI Sales Data Analysis Project** using MySQL Workbench.
 
 ---
 
-## Prerequisites
+## 🧰 Prerequisites
 
-Ensure you have the following installed:
-- MySQL Server (8.0+ recommended)
-- MySQL Workbench
+Ensure the following tools are installed:
+
+* MySQL Server (8.0 or above recommended)
+* MySQL Workbench
+* (Optional) Power BI Desktop for dashboard visualization
 
 ---
 
-## Project Structure
-```
-sales-data-analysis-sql/
+## 📁 Project Structure
+
+```text
+sales-data-analysis-sql-powerbi/
 │
 ├── data/
 │   ├── sales_data_raw.csv
@@ -24,66 +27,146 @@ sales-data-analysis-sql/
 │   ├── sales_data_cleaning.sql
 │   └── sales_eda.sql
 │
+├── powerbi/
+│   └── sales_dashboard.pbix
+│
+├── images/
+│
 ├── README.md
+├── setup.md
 └── insights.md
-└── setup.md
 ```
 
-## Step 1: Create Database
+---
 
-Run the following in MySQL Workbench:
+## ⚙️ Step 1: Create Database
+
+Run the following commands in MySQL Workbench:
 
 ```sql
 CREATE DATABASE sales_project;
 USE sales_project;
 ```
-## Step 2: Import Dataset
-### Import the raw dataset:
-```File: data/sales_data_raw.csv```
-```Table name: sales_data```
+
+---
+
+## 📥 Step 2: Import Dataset
+
+Import the raw dataset into MySQL:
+
+* **File:** `data/sales_data_raw.csv`
+* **Table Name:** `sales_data`
 
 Use:
-Table Data Import Wizard (recommended)
 
-## Step 3: Run Data Cleaning Script
+* MySQL Workbench → *Table Data Import Wizard* (recommended)
+
+---
+
+## 🧹 Step 3: Run Data Cleaning Script
+
 Open and execute:
-```sql/sales_data_cleaning.sql```
 
-This will:
-Create a working table (sales_data_1)
-Clean and standardize the dataset
-Apply validation checks
+```text
+sql/sales_data_cleaning.sql
+```
 
-## Step 4: Run EDA Queries
+This script will:
+
+* Create a working table (`sales_data_1`)
+* Remove duplicates and handle null values
+* Standardize and clean data
+* Apply business validation rules
+
+---
+
+## 📊 Step 4: Run EDA Queries
+
 Open and execute:
-```sql/sales_eda.sql```
+
+```text
+sql/sales_eda.sql
+```
 
 This will generate insights on:
-Revenue trends
-Product and category performance
-Regional and customer analysis
 
-## Output
+* Revenue trends
+* Product and category performance
+* Regional and customer analysis
+* Payment method and sales channel insights
 
-Cleaned dataset will be stored in:
-```sales_data_1```
+---
+
+## 📈 Step 5: Open Power BI Dashboard (Optional)
+
+Open:
+
+```text
+powerbi/sales_dashboard.pbix
+```
+
+This dashboard includes:
+
+* KPI metrics (Revenue, Quantity, Top Performers)
+* Sales trend analysis
+* Category and region comparisons
+* Customer and payment insights
+
+---
+
+## 📤 Output
+
+The cleaned dataset will be stored in:
+
+```text
+sales_data_1
+```
 
 You can export it as:
-```data/sales_data_cleaned.csv```
 
-### Notes
-Ensure table name is sales_data before running queries
-Modify script if using a different table name
-Dataset is used for learning and analysis purposes
+```text
+data/sales_data_cleaned.csv
+```
 
-### Troubleshooting
-Issue: Date conversion error
+---
 
-### Check format:
-```STR_TO_DATE(Sale_Date, '%Y-%m-%d')```
+## 📝 Notes
 
-### Issue: No data imported
-Verify CSV encoding (UTF-8) and delimiter
+* Ensure the imported table name is exactly `sales_data`
+* Update SQL scripts if using a different table name
+* Dataset is used for learning and analysis purposes
 
-###vIssue: Update errors
-```SET SQL_SAFE_UPDATES = 0;```
+---
+
+## ⚠️ Troubleshooting
+
+### Issue: Date conversion error
+
+Ensure the correct format is used:
+
+```sql
+STR_TO_DATE(Sale_Date, '%Y-%m-%d')
+```
+
+---
+
+### Issue: Data not importing correctly
+
+* Check CSV encoding (UTF-8 recommended)
+* Verify delimiter settings
+
+---
+
+### Issue: Update restriction error
+
+Disable safe updates temporarily:
+
+```sql
+SET SQL_SAFE_UPDATES = 0;
+```
+
+---
+
+## 👤 Author
+
+**Rishi Raj**
