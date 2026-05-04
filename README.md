@@ -63,7 +63,7 @@ Performed SQL-based analysis to extract key business insights:
 * `sql/sales_data_cleaning.sql` → Data cleaning queries
 * `sql/sales_eda.sql` → Exploratory data analysis queries
 * `setup.md` → Setup and execution guide
-
+*`insights.md` → Summary of key business insights derived from EDA  
 ---
 
 ## 📂 Dataset Columns
