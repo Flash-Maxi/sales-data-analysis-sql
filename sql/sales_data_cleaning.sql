@@ -12,9 +12,6 @@ insert into sales_data_1
 select*
 from sales_data;
 
-select *
-from sales_data_1;
-
 -- checking for dublictae values
 
 with dubl_cte as(
@@ -78,7 +75,7 @@ modify Sale_Date date;
 select *
 from sales_data_1;					
 
--- roundinf off all the amounts by 2 for clean visuals of table
+-- rounding off all the amounts by 2 for clean visuals of data
 select
     round(Sales_Amount, 2) as Sales_Amount,
     round(Unit_Cost, 2) as Unit_Cost,
