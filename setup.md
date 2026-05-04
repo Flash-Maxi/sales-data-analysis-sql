@@ -39,7 +39,7 @@ USE sales_project;
 ```
 ## Step 2: Import Dataset
 ### Import the raw dataset:
-File: data/sales_data_raw.csv 
+File: data/sales_data_raw.csv
 
 Table name: sales_data
 
