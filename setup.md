@@ -36,11 +36,11 @@ Run the following in MySQL Workbench:
 ```sql
 CREATE DATABASE sales_project;
 USE sales_project;
-Step 2: Import Dataset
 ```
+## Step 2: Import Dataset
+### Import the raw dataset:
+File: data/sales_data_raw.csv 
 
-## Import the raw dataset:
-File: data/sales_data_raw.csv
 Table name: sales_data
 
 Use:
@@ -72,12 +72,12 @@ sales_data_1
 You can export it as:
 data/sales_data_cleaned.csv
 
-## Notes
+### Notes
 Ensure table name is sales_data before running queries
 Modify script if using a different table name
 Dataset is used for learning and analysis purposes
 
-## Troubleshooting
+### Troubleshooting
 Issue: Date conversion error
 
 ### Check format:
