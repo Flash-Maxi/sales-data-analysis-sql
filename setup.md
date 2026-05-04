@@ -13,7 +13,7 @@ Ensure you have the following installed:
 ---
 
 ## Project Structure
-
+```
 sales-data-analysis-sql/
 │
 ├── data/
@@ -26,8 +26,7 @@ sales-data-analysis-sql/
 │
 ├── README.md
 └── setup.md
-
----
+```
 
 ## Step 1: Create Database
 
@@ -39,16 +38,15 @@ USE sales_project;
 ```
 ## Step 2: Import Dataset
 ### Import the raw dataset:
-File: data/sales_data_raw.csv
-
-Table name: sales_data
+```File: data/sales_data_raw.csv```
+```Table name: sales_data```
 
 Use:
 Table Data Import Wizard (recommended)
 
 ## Step 3: Run Data Cleaning Script
 Open and execute:
-sql/sales_data_cleaning.sql
+```sql/sales_data_cleaning.sql```
 
 This will:
 Create a working table (sales_data_1)
@@ -57,7 +55,7 @@ Apply validation checks
 
 ## Step 4: Run EDA Queries
 Open and execute:
-sql/sales_eda.sql
+```sql/sales_eda.sql```
 
 This will generate insights on:
 Revenue trends
@@ -67,10 +65,10 @@ Regional and customer analysis
 ## Output
 
 Cleaned dataset will be stored in:
-sales_data_1
+```sales_data_1```
 
 You can export it as:
-data/sales_data_cleaned.csv
+```data/sales_data_cleaned.csv```
 
 ### Notes
 Ensure table name is sales_data before running queries
@@ -81,10 +79,10 @@ Dataset is used for learning and analysis purposes
 Issue: Date conversion error
 
 ### Check format:
-STR_TO_DATE(Sale_Date, '%Y-%m-%d')
+```STR_TO_DATE(Sale_Date, '%Y-%m-%d')```
 
 ### Issue: No data imported
 Verify CSV encoding (UTF-8) and delimiter
 
 ###vIssue: Update errors
-SET SQL_SAFE_UPDATES = 0;
+```SET SQL_SAFE_UPDATES = 0;```
