@@ -27,7 +27,7 @@ The raw dataset contained inconsistencies and data quality issues. The following
 
 * Created a staging table to preserve original data
 * Identified duplicate records using `ROW_NUMBER()`
-* Checked and handled null values in key columns
+* Checked and handled null values in key columns.
 * Standardized categorical fields
 * Converted `Sale_Date` from text to `DATE` format
 * Rounded numeric fields (`Sales_Amount`, `Unit_Cost`, `Unit_Price`, `Discount`)
